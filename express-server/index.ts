@@ -11,7 +11,7 @@ app.post("/submit", async (req, res) => {
     const problemId = req.body.problemId;
     const code = req.body.code;
     const language = req.body.language;
-     console.log(problemId)
+     console.log (problemId)
     try {
         await client.lPush("problems", JSON.stringify({ code, language, problemId }));
         // Store in the database
